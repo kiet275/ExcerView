@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hiển thị và Tìm kiếm Excel</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome cho biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <h2>Hiển thị và Tìm kiếm File Excel</h2>
+    <input type="file" id="excelFile" accept=".xlsx, .xls" />
+    <br />
+    <input type="text" id="search" placeholder="Tìm kiếm..." />
+
+    <div style="margin-top: 10px">
+      <!-- Nút Tải xuống PDF/Word -->
+      <div class="dropdown">
+        <button class="dropbtn">Tải xuống</button>
+        <div class="dropdown-content">
+          <a href="#" id="exportPdfBtn">Xuất PDF</a>
+          <a href="#" id="exportWordBtn">Xuất Word</a>
+        </div>
+      </div>
+
+      <!-- Nút Tải Excel và Hoàn tác -->
+      <button id="downloadExcelBtn" class="action-btn">
+        <i class="fas fa-file-excel"></i> Tải Excel đã chỉnh sửa
+      </button>
+
+      <button id="undoBtn" class="action-btn">
+        <i class="fas fa-rotate-left"></i> Hoàn tác
+      </button>
+    </div>
+
+    <div id="tableContainer" style="margin-top: 20px"></div>
+
+    <div id="fileHistoryContainer" style="margin-top: 20px">
+      <h4>Lịch sử file gần đây</h4>
+      <ul id="fileHistory"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

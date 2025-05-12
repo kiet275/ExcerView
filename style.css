@@ -1,0 +1,235 @@
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  margin: 20px;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+input[type="file"],
+input[type="text"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="file"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+#search {
+  margin: 15px 0;
+  padding: 10px 15px;
+  width: 300px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+tr {
+  transition: background-color 0.2s ease;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+tr.highlight {
+  background-color: #fefcbf;
+}
+
+mark {
+  background-color: #fef08a;
+  font-weight: 600;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+#fileHistoryContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+
+#fileHistoryContainer:hover {
+  transform: translateY(-2px);
+}
+
+#fileHistoryContainer h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+#fileHistory {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#fileHistory li {
+  color: #3b82f6;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+#fileHistory li:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.edited {
+  background-color: #fefcbf !important;
+}
+
+/* Scrollbar styling for file history */
+#fileHistory::-webkit-scrollbar {
+  width: 6px;
+}
+
+#fileHistory::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#fileHistory::-webkit-scrollbar-thumb {
+  background: #bfdbfe;
+  border-radius: 10px;
+}
+
+#fileHistory::-webkit-scrollbar-thumb:hover {
+  background: #93c5fd;
+}
+
+.edited {
+  background-color: #fff3cd !important; /* màu vàng nhạt */
+}
+
+/* Nút chính màu xanh lá */
+.dropbtn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Vùng chứa menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Menu con ẩn mặc định */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Các mục bên trong menu */
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover lên item trong menu */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hiển thị menu khi hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Nút hành động */
+.action-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* khoảng cách giữa icon và chữ */
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+.action-btn i {
+  font-size: 18px;
+}
